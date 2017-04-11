@@ -1,1 +1,13 @@
 events#index page
+
+<p><%=link_to "New Event", new_event_path%></p>
+
+<%= @events.each do |current_event| %>
+<div class="event">
+
+ <h3>Event Name: <%= link_to current_event.name, event_path(current_event.id) %></h3>
+ <p>Event Date: <%=current_event.date %></p>
+ <p>.</p>
+ <p>.</p>
+ <% end %>
+</div>
